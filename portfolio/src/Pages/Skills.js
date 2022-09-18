@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 function Skills() {
   const [technologie, settechnologie] = React.useState([])
   React.useEffect(() => {
@@ -17,7 +17,7 @@ function Skills() {
             <img src={item.image} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{item.name}</h5>
-              <a href="#" className="btn btn-primary">learn about</a>
+              <Link to={`/skills/${item.id}`} className="btn btn-primary">learn about</Link>
             </div>
           </div>
         </div>
